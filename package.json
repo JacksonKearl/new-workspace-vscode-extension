@@ -4,6 +4,9 @@
   "publisher": "jakearl",
   "description": "Demo project wrapping a yeoman generator with VS Code UI in order to create extension templates in-editor",
   "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/JacksonKearl/new-workspace-vscode-extension"
+  },
   "engines": {
     "vscode": "^1.58.0"
   },
