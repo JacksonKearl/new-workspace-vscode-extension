@@ -1,0 +1,51 @@
+{
+  "name": "new-workspace-vscode-extension",
+  "displayName": "Create New VS Code Extension",
+  "publisher": "jakearl",
+  "description": "Demo project wrapping a yeoman generator with VS Code UI in order to create extension templates in-editor",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.58.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:new-workspace-vscode-extension.newExtension"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "new-workspace-vscode-extension.newExtension",
+        "title": "Scaffold New Extension"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.58.0",
+    "@types/yeoman-environment": "^2.10.4",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  },
+  "dependencies": {
+    "generator-code": "^1.5.3",
+    "yeoman-environment": "^3.5.1"
+  }
+}
